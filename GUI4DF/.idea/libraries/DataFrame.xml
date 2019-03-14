@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="DataFrame">
+    <CLASSES>
+      <root url="jar://C:/artifacts/DataFrame_jar/DataFrame.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../JavaLab/DataFrame/src" />
+    </SOURCES>
+  </library>
+</component>

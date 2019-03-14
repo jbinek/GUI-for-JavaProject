@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ComplexChartController">
+  <children>
+    <SplitPane dividerPositions="0.33407572383073497" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane>
+               <children>
+                  <Label fx:id="additionalCountLabel" layoutX="17.0" layoutY="244.0" prefHeight="26.0" prefWidth="264.0" text="Wybierz ilość serii danych do utworzenia wykresu:" />
+                  <VBox layoutX="21.0" layoutY="36.0" prefHeight="190.0" prefWidth="255.0" style="-fx-background-color: #E0 #FFF5EEFFFF;">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="195.0" text="Wybierz kolumnę do osi OX:" />
+                        <ComboBox fx:id="cmbColNamesX" onAction="#Xclicked" prefWidth="150.0" />
+                        <Label prefHeight="34.0" prefWidth="162.0" text="Wybierz kolumnę do osi OY:" />
+                        <ComboBox fx:id="cmbColNamesY" onAction="#Yclicked" prefWidth="150.0" />
+                        <Label prefHeight="36.0" prefWidth="148.0" text="Wybierz typ wykresu:" />
+                        <ComboBox fx:id="cmbTypeOfChart" onAction="#typeClicked" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="drawChartButton" layoutX="21.0" layoutY="513.0" mnemonicParsing="false" onAction="#drawChart" prefHeight="38.0" prefWidth="83.0" text="Rysuj" />
+                  <ComboBox fx:id="additionalCountCmb" layoutX="17.0" layoutY="274.0" onAction="#additionalCountCmbClicked" prefWidth="150.0" />
+                  <Label fx:id="additionalOYlabel" layoutX="21.0" layoutY="325.0" prefHeight="26.0" prefWidth="223.0" text="Wybierz dodatkowe kolumny do osi OY:" />
+                  <ComboBox fx:id="inaCaseOfTwoCmb" layoutX="17.0" layoutY="360.0" onAction="#inaCaseOfTwoCmbClicked" prefWidth="150.0" />
+                  <ComboBox fx:id="inaCaseOfThreeCmb" layoutX="17.0" layoutY="410.0" onAction="#inaCaseOfThreeCmbClicked" prefWidth="150.0" />
+               </children>
+        </AnchorPane>
+            <ScrollPane fx:id="chartPane" fitToHeight="true" fitToWidth="true" prefHeight="598.0" prefWidth="595.0" />
+      </items>
+    </SplitPane>
+  </children>
+</VBox>
